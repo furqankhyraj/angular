@@ -1,6 +1,9 @@
 <div class="row">
         <label>Server Name</label>
         <input type="text" class="form-control" (input)="onUpdateServerName($event)">
+        <!-- Two Way Binding Start -->
+        <input type="text" class="form-control" [(ngModel)]="serverName">
+        <!-- Two Way Binding End -->
         <p>{{serverName}}</p>
 </div>
 <div class="row">
