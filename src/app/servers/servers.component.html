@@ -1,10 +1,17 @@
+<div class=""><h2>Pratise Event Binding</h2>
+    <input type="text" class="form-control" [(ngModel)]="userName" (input)="updateUserName()" />
+    <p>{{userName}}</p>
+</div>
+   
+  <button class="btn btn-primary" [disabled]="resetUserNameFlag" (click)="onClickUserNameReset()">Reset User</button>
+
 <div class="row">
         <label>Server Name</label>
         <input type="text" class="form-control" (input)="onUpdateServerName($event)">
         <!-- Two Way Binding Start -->
         <input type="text" class="form-control" [(ngModel)]="serverName">
         <!-- Two Way Binding End -->
-        <p>{{serverName}}</p>
+        <!-- <p>{{serverName}}</p> -->
 </div>
 <div class="row">
         <!-- <button 
@@ -16,5 +23,5 @@
         (click)="onCreateServer()">Add Server</button>
         <!-- <p [innerText]="allowNewServer"></p> -->
         <p>{{ serverCreationStatus }}</p>
-    </div>
+    </div>      
 <app-server></app-server>
