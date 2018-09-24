@@ -1,0 +1,6 @@
+{
+  "appId": "com.tasha",
+  "appName": "Tasha",
+  "bundledWebRuntime": false,
+  "webDir": "www"
+}
