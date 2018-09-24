@@ -23,6 +23,10 @@
         (click)="onCreateServer()">Add Server</button>
         <!-- <p [innerText]="allowNewServer"></p> -->
         <!-- <p>{{ serverCreationStatus }}</p> -->
-        <p *ngIf="serverCreated">{{ serverCreationStatus }}</p>
+        <p *ngIf="serverCreated; else noServer">{{ serverCreationStatus }}</p>
+        <ng-template #noServer>
+            <p>No server was created123!</p>
+        </ng-template>
+        <ng-template #blankServer></ng-template>
     </div>      
 <app-server></app-server>
