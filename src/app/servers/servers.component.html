@@ -2,7 +2,7 @@
     <input type="text" class="form-control" [(ngModel)]="userName" (input)="updateUserName()" />
     <p>{{userName}}</p>
 </div>
-   
+
   <button class="btn btn-primary" [disabled]="resetUserNameFlag" (click)="onClickUserNameReset()">Reset User</button>
 
 <div class="row">
@@ -14,11 +14,11 @@
         <!-- <p>{{serverName}}</p> -->
 </div>
 <div class="row">
-        <!-- <button 
-        class="btn btn-primary" 
+        <!-- <button
+        class="btn btn-primary"
         [disabled]="!allowNewServer">Add Server</button> -->
-        <button 
-        class="btn btn-primary" 
+        <button
+        class="btn btn-primary"
         [disabled]="!allowNewServer"
         (click)="onCreateServer()">Add Server</button>
         <!-- <p [innerText]="allowNewServer"></p> -->
@@ -28,5 +28,6 @@
             <p>No server was created123!</p>
         </ng-template>
         <ng-template #blankServer></ng-template>
-    </div>      
-<app-server></app-server>
+    </div>
+<app-server *ngFor="let server of servers"></app-server>
+
